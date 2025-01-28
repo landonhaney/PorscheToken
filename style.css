@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'Porsche';
+  src: url('./fonts/911\ Porscha.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  cursor: default;
+}
+
+h1 {
+  font-family: 'Porsche', sans-serif;
+  transform: scale(1, 1.3);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+.page-background {
+  position: relative;
+  overflow: hidden; /* Prevents extra scrolling artifacts */
+}
+
+.page-background::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('PorscheToken.png.jpg');
+  background-size: cover;
+  background-position: center center;
+  z-index: -1; /* Places the background behind other content */
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 330px;
+  font-size: 1.5rem;
+  margin-left: 2rem;
+}
+
+footer {
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.vertical-text {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  font-size: 50px;
+  /* letter-spacing: 20px; */
+}
+
+.desktop-design-layout {
+  text-align: center;
+}
+
+.text-reveal {
+  line-height: 1.7;
+  color: hsl(0 0% 100% / 0);
+  background-clip: text;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-image: linear-gradient(90deg, white, white, white);
+}
+
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    scroll-behavior: smooth;
+  }
+
+  h1 {
+    font-size: 2.5rem; /* Smaller heading on mobile */
+  }
+
+  section {
+    font-size: 1.2rem; /* Smaller text size for mobile */
+    padding: 10px; /* Adjust padding for smaller screens */
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .vertical-text {
+    font-size: 2rem; /* Smaller font for vertical text */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    font-size: 0.9rem; /* Further scale down for very small screens */
+  }
+
+  .vertical-text {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="javaScript.js" />
+  </head>
+  <body>
+    <div class="page-background">
+      <section id="header">
+        <h1 class="vertical-text">PORSCHE TOKEN</h1>
+      </section>
+
+      <section>
+        <div class="text-reveal desktop-design-layout">
+          <p>
+            Porsche, a legendary German automaker, is renowned for its
+            high-performance sports cars, luxury SUVs, and cutting-edge
+            automotive engineering. Founded in 1931 by Ferdinand Porsche, the
+            company gained fame with the iconic 911 model, introduced in 1964,
+            which remains a benchmark in sports car design. Known for blending
+            speed, precision, and elegance, Porsche has expanded its lineup to
+            include electric vehicles like the Taycan, showcasing its commitment
+            to innovation and sustainability. With a legacy rooted in motorsport
+            success and a reputation for quality and craftsmanship, Porsche
+            continues to symbolize excellence and driving passion worldwide.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="desktop-design-layout">
+          A Porsche isn't just a car, it's a
+          <div style="font-size: 70px">FEELING</div>
+        </div>
+      </section>
+
+      <section>
+        <div class="desktop-design-layout" style="font-size: 1.6rem;">
+          Get your Porsche Token today.
+        </div>
+          <div style="padding-top: 20px;">#PRSCHE</div>
+          <div><a style="text-decoration: none; color: rgb(250, 88, 234); font-size: 1rem; cursor: pointer;" href="https://phantom.com">Phantom Wallet</a></div>
+      </section>
+
+      <footer class="desktop-design-layout">PORSCHE TOKEN © 2025</footer>
+    </div>
+
+    <script>
+      window.addEventListener('scroll', function () {
+        const revealText = document.querySelector('.text-reveal');
+        const scrollPosition = window.scrollY;
+        const maxScroll =
+          document.documentElement.scrollHeight - window.innerHeight;
+
+        // Calculate how far the user has scrolled as a percentage of the total scrollable height
+        const scrollPercentage = (scrollPosition / maxScroll) * 325;
+
+        // Update the background size based on the scroll position
+        revealText.style.backgroundSize = `${scrollPercentage}% 100%`;
+      });
+    </script>
+  </body>
+</html>
